@@ -12,4 +12,8 @@
  *= require_tree .
  */
 
-
+.navbar-inner {
+  background: #000; 
+  background-image: none;
+  background-repeat: no-repeat;
+}
