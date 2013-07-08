@@ -25,6 +25,17 @@ module Ffe
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 
+	 # don't generate RSpec tests for views and helpers
+	  config.generators do |g|
+		g.test_framework :rspec, fixture: true
+		g.fixture_replacement :factory_girl, dir: 'spec/factories'
+		g.view_specs false
+		g.helper_specs false
+		g.stylesheets = false
+		g.javascripts = false
+		g.helper = false
+	  end
+
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'

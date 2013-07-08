@@ -28,7 +28,6 @@ end
 
 gem 'jquery-rails'
 
-gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'devise'
@@ -47,3 +46,42 @@ gem 'devise'
 
 # To use debugger
 # gem 'debugger'
+
+
+
+
+group :development, :test do
+  gem 'therubyracer', '>= 0.11.4', :platforms => :ruby
+  gem 'rspec-rails'
+  gem 'pry'
+  gem 'database_cleaner', '>= 0.9.1'
+  gem 'email_spec', '>= 1.2.1'
+  gem "cucumber-rails", ">= 1.3.0" ,:require => false
+#  gem "turnip"
+  gem 'launchy'
+  gem 'capybara'
+  gem "json_spec"
+
+  gem 'hub', '>= 1.10.2', :require => nil
+  # case HOST_OS
+  #   when /darwin/i
+  #    gem 'rb-fsevent'
+  #    gem 'growl'
+  #    gem 'rb-fchange', :require => false
+  #    gem 'ruby_gntp'
+
+  #   when /linux/i
+  #     gem 'libnotify'
+  #     gem 'rb-inotify'
+  # end
+  gem "rack-test", require: "rack/test"
+  gem 'guard', '>= 1.4.0'
+  gem 'guard-bundler', '>= 1.0.0'
+  gem 'guard-rails', '>= 0.1.1'
+  gem 'guard-livereload', '>= 1.0.1'
+  gem 'guard-rspec', '>= 2.1.0'
+  gem 'guard-cucumber', '>= 0.6.1'
+  gem 'selenium-webdriver'
+#  gem 'guard-zeus'
+  gem 'factory_girl_rails', '>= 4.1.0'
+end
